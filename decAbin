@@ -1,0 +1,13 @@
+cadena=[]
+def binarios(numero):
+    while numero>0:    
+        if numero % 2 ==0:
+            cadena.append(0)
+        elif numero % 2 !=0:
+            cadena.append(1)
+        numero=numero//2
+    list(reversed(cadena))
+    return cadena
+cantidad=int(input("Ingresa una cantidad: "))
+res=binarios(cantidad)
+print("".join(map(str,res)))
